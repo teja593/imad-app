@@ -16,7 +16,9 @@ var articles={
                     hari ah
                 </p>
                 <p>
-                    this is the content for my  first article.this is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first article
+                    iam P.A.SURYA TEJA
+                    SASI INSTITUTE OF TECHNOLOGY AND ENGINEERING
+                    TADEPALLIGUDEM
                 </p>
                 <p>
                     this is the content for my  first article.this is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first article
