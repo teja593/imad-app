@@ -59,7 +59,7 @@ var HtmlTemplate=`<html>
 
 
 `;
-return htmlTemplate;
+return HtmlTemplate;
 }
 
 app.get('/', function (req, res) {
