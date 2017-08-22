@@ -5,12 +5,13 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone= {
+var articles={
+    'article-one':{
   title:'Article-one| surya teja',
   heading: 'Article-one',
   date:'august 23rd 2017',
   content:`
-   <p>
+      <p>
                     suryQA
                     hari ah
                 </p>
@@ -19,10 +20,49 @@ var articleone= {
                 </p>
                 <p>
                     this is the content for my  first article.this is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first article
-                </p>`
-  
-  
+                </p>
+                `
+                    
+    },
+    'article-two':{
+         title:'Article-two| surya teja',
+  heading: 'Article-two',
+  date:'august 22rd 2017',
+  content:`
+      <p>
+                    suryQA
+                    hari ah
+                </p>
+                <p>
+                    this is the content for my  first article.this is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first article
+                </p>
+                <p>
+                    this is the content for my  first article.this is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first articlethis is the content for my  first article
+                </p>
+                `
+                    
+    
+    },
+    'article-three':{
+        title:'Article-three| surya teja',
+  heading: 'Article-threee',
+  date:'august 21rd 2017',
+  content:`
+      <p>
+                    suryQA
+                    hari ah
+                </p>
+                
+                `
+                    
+    }
 };
+
+    
+    
+    
+  
+
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
@@ -66,20 +106,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-     res.send(createTemplate(articleone));
+app.get('/articleName',function(req,res){
+    //article name will be article-one
+    var articleName=req.params.articleName;
+     res.send(createTemplate(articles(articleName)));
     
 });
 
-app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-    
-});
 
-app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-    
-});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
